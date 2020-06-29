@@ -17,7 +17,7 @@ public class SkillProxy implements InvocationHandler {
     @Override
     public Object invoke(Object proxy, Method method, Object[] args) throws Throwable {
         Object result = method.invoke(target, args);
-        System.out.println("哈哈我是代理包装类，代理了" + method.getName() + "方法：而且还做了强化");
+        System.out.println("哈哈我是代理包装类，代理了" + method.getName() + "方法：做了强化");
         return result;
     }
 

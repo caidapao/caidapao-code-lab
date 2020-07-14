@@ -10,5 +10,7 @@ public class AbstractFactoryTest {
 
     public static void main(String[] args) {
 
+        ShoeFactory shoeFactory = new ShoeFactory();
+        System.out.println(shoeFactory.getAdidasShoe().getShoeName());
     }
 }

@@ -6,7 +6,6 @@ import com.caidapao.pattern.factory.Nike;
 import com.caidapao.pattern.factory.Shoe;
 
 /**
- * 简单工厂模式实现
  * Time 2020-7-14 20:52
  *
  * @author caidapao

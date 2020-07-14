@@ -1,9 +1,10 @@
 package com.caidapao.pattern.factory.simple;
 
 /**
- * Created by caidapao on 2020-7-14
- * Time 14:20
+ * 简单工厂模式实现
+ * Time 2020-7-14 14:20
  * Address https://today.caidapao.com
+ * @author caidapao
  */
 public class SimpleFactoryTest {
 

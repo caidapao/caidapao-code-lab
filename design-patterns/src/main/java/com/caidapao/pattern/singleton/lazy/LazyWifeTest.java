@@ -8,20 +8,20 @@ import java.util.concurrent.CountDownLatch;
  *
  * @author caidapao
  */
-public class LazySingletonTest {
+public class LazyWifeTest {
 
 
     public static void main(String[] args) {
-        int count = 50;
+        int count = 100;
         CountDownLatch downLatch = new CountDownLatch(count);
         for (int i = 0; i < count; i++) {
             new Thread(() -> {
                 try {
                     downLatch.await();
+                    System.out.println(System.currentTimeMillis() + ":" + LazyWife.getLazyWife());
                 } catch (InterruptedException e) {
                     e.printStackTrace();
                 }
-                System.out.println(System.currentTimeMillis() + ":" + LazyWife.getLazyWife());
 
             }).start();
             downLatch.countDown();

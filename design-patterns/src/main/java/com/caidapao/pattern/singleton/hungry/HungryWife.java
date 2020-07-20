@@ -11,7 +11,7 @@ public class HungryWife {
 
     private HungryWife(){}
 
-    public static final HungryWife HUNGRY_WIFE = new HungryWife();
+    private static final HungryWife HUNGRY_WIFE = new HungryWife();
 
     public static HungryWife getHungryWife() {
         return HUNGRY_WIFE;

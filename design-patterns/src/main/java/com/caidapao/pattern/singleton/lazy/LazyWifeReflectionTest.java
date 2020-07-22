@@ -28,7 +28,7 @@ public class LazyWifeReflectionTest {
 
             Class<?> clazz = Class.forName("com.caidapao.pattern.singleton.lazy.LazyWifeInner");
             Constructor<?>[] cs = clazz.getDeclaredConstructors();
-            for (Constructor c : cs) {
+            for (Constructor<?> c : cs) {
                 c.setAccessible(true);
                 LazyWifeInner o = (LazyWifeInner) c.newInstance();
                 System.out.println(o);

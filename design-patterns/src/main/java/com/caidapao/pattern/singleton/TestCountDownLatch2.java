@@ -10,7 +10,7 @@ import java.util.concurrent.Executors;
  *
  * @author caidapao
  */
-public class Test2 {
+public class TestCountDownLatch2 {
 
     public static void main(String[] args) {
         ExecutorService service = Executors.newCachedThreadPool();

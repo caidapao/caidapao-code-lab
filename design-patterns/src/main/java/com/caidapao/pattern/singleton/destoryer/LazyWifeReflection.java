@@ -1,4 +1,4 @@
-package com.caidapao.pattern.singleton.lazy;
+package com.caidapao.pattern.singleton.destoryer;
 
 /**
  * Time 2020/7/20 21:32
@@ -8,15 +8,10 @@ package com.caidapao.pattern.singleton.lazy;
  */
 public class LazyWifeReflection {
 
-    private static boolean initialized = false;
 
     private LazyWifeReflection() {
-        synchronized (LazyWifeReflection.class) {
-            if (!initialized) {
-                initialized = true;
-            } else {
-                throw new RuntimeException("单例模式被破坏");
-            }
+        if (LazyWifeInnerHolder.LAZY_WIFE_INNER != null) {
+            throw new RuntimeException("单例模式已经被暴力侵犯");
         }
     }
 

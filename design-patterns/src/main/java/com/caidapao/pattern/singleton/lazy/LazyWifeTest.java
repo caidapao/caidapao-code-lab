@@ -3,6 +3,7 @@ package com.caidapao.pattern.singleton.lazy;
 import java.util.concurrent.CountDownLatch;
 
 /**
+ * 懒汉模式基础，有并发问题，会产生多个Wife（渣男）
  * Time 2020/7/15 23:32
  * address https://today.caidapao.com
  *

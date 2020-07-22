@@ -3,6 +3,7 @@ package com.caidapao.pattern.singleton.lazy;
 import java.lang.reflect.Constructor;
 
 /**
+ * 反射会破坏单例模式演示
  * Time 2020/7/20 21:32
  * address https://today.caidapao.com
  *

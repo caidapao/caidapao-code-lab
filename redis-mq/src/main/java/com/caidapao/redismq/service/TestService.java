@@ -17,10 +17,16 @@ public class TestService {
 
     public static final String USER = "USER";
 
+    /**
+     * 模拟生产者
+     *
+     * @param num push消息到list的数量
+     */
     public void producer(int num) {
         Assert.isTrue(num > 0, "num must greater than 0 ");
         CountDownLatch countDownLatch = new CountDownLatch(num);
 
+        //这里不用多线程也完全没问题
         for (int i = 0; i < num; i++) {
             int finalI = i;
             new Thread(() -> {
@@ -31,7 +37,7 @@ public class TestService {
 
         try {
             countDownLatch.await();
-            System.out.println("执行完成");
+            System.out.println("生产完成");
         } catch (Exception e) {
             e.printStackTrace();
         }
@@ -39,23 +45,32 @@ public class TestService {
 
     }
 
+    /**
+     * 模拟消费者消费队列中的消息
+     */
     public void consumer() {
-        while (true){
+        System.out.println("开始消费");
+        while (true) {
             try {
-                handle();
-            }catch (Exception e){
+                handleBusinessWork();
+            } catch (Exception e) {
                 e.printStackTrace();
             }
-            System.out.println("handle finish");
         }
     }
 
-    private void handle() {
-        String value = (String) RedisUtil.rPop(USER,10);
-        if("88".equals(value)){
+    /**
+     * 模拟处理业务
+     */
+    private void handleBusinessWork() {
+        //redisTemplate的pop方法都是
+        String value = (String) RedisUtil.rPop(USER, 10);
+        if ("88".equals(value)) {
             System.out.println("==========================");
-            int i = 5/0;
+            //模拟处理业务时失败的场景。当前pop出来的这条就丢失了，因为没有ack确认
+            int i = 5 / 0;
         }
+        System.out.println("消费" + value + "完成");
     }
 
 }

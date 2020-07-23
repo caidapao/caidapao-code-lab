@@ -4,27 +4,27 @@ server:
 spring:
   redis:
     port: 6379
-    password:
+    password: 111111
     host: test-scdb.nimble.cn
     lettuce:
       pool:
-        max-active: 10 #最大连接数
-        max-idle: 6 #最大空闲数
-        min-idle: 2 #最小空闲数
-    timeout: 5000 #连接超时
+        max-active: 10
+        max-idle: 6
+        min-idle: 2
+    timeout: 5000
     database: 10
 
 #spring:
 #  redis:
 #    port: 6379
-#    password: 111111
+#    password:
 #    host: test-scdb.nimble.cn
 #    jedis:
 #      pool:
-#        max-idle: 6 #最大空闲数
-#        max-active: 10 #最大连接数
-#        min-idle: 2 #最小空闲数
-#    timeout: 2000 #连接超时
+#        max-idle: 6
+#        max-active: 10
+#        min-idle: 2
+#    timeout: 5000
 #    database: 10
 
 logging:

@@ -1,7 +1,7 @@
 package com.caidapao.pattern.singleton.register;
 
 import com.caidapao.pattern.singleton.lazy.LazyWifeInnerTest;
-import com.caidapao.pattern.singleton.destoryer.LazyWifeReflectionTest;
+import com.caidapao.pattern.singleton.destoryer.ReflectDestroyerTest;
 import com.caidapao.pattern.singleton.lazy.LazyWifeSyncTest;
 import com.caidapao.pattern.singleton.lazy.LazyWifeTest;
 
@@ -19,7 +19,7 @@ public class RegisterSingletonTest {
 
         System.out.println(RegisterSingleton.getBean(LazyWifeTest.class.getName()));
         System.out.println(RegisterSingleton.getBean(LazyWifeInnerTest.class.getName()));
-        System.out.println(RegisterSingleton.getBean(LazyWifeReflectionTest.class.getName()));
+        System.out.println(RegisterSingleton.getBean(ReflectDestroyerTest.class.getName()));
         System.out.println(RegisterSingleton.getBean(LazyWifeSyncTest.class.getName()));
     }
 

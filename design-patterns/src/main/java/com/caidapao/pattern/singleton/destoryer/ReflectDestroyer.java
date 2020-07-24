@@ -6,21 +6,21 @@ package com.caidapao.pattern.singleton.destoryer;
  *
  * @author caidapao
  */
-public class LazyWifeReflection {
+public class ReflectDestroyer {
 
 
-    private LazyWifeReflection() {
+    private ReflectDestroyer() {
         if (LazyWifeInnerHolder.LAZY_WIFE_INNER != null) {
             throw new RuntimeException("单例模式已经被暴力侵犯");
         }
     }
 
-    public static LazyWifeReflection getInstance() {
+    public static ReflectDestroyer getInstance() {
         return LazyWifeInnerHolder.LAZY_WIFE_INNER;
     }
 
     private static class LazyWifeInnerHolder {
-        private static final LazyWifeReflection LAZY_WIFE_INNER = new LazyWifeReflection();
+        private static final ReflectDestroyer LAZY_WIFE_INNER = new ReflectDestroyer();
     }
 
 

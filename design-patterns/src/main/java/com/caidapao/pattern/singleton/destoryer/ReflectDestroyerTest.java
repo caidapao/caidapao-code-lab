@@ -9,20 +9,21 @@ import java.lang.reflect.Constructor;
  *
  * @author caidapao
  */
-public class LazyWifeReflectionTest {
+public class ReflectDestroyerTest {
 
 
     public static void main(String[] args) {
         try {
 
             //已经创建一个了
-            LazyWifeReflection singleton = LazyWifeReflection.getInstance();
+            ReflectDestroyer singleton = ReflectDestroyer.getInstance();
 
             //再暴力创建一个
-            Class<?> clazz = Class.forName(LazyWifeReflection.class.getName());
+            Class<?> clazz = Class.forName(ReflectDestroyer.class.getName());
             Constructor<?> constructor = clazz.getDeclaredConstructor();
             constructor.setAccessible(true);
-            LazyWifeReflection o = (LazyWifeReflection) constructor.newInstance();
+            //抛出异常
+            ReflectDestroyer o = (ReflectDestroyer) constructor.newInstance();
             System.out.println(o == singleton);
 
         } catch (Exception e) {

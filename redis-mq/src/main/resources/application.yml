@@ -4,7 +4,7 @@ server:
 spring:
   redis:
     port: 6379
-    password: 111111
+    password:
     host: test-scdb.nimble.cn
     lettuce:
       pool:

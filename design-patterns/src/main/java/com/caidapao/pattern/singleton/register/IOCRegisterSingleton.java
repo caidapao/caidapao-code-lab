@@ -8,9 +8,9 @@ import java.util.concurrent.ConcurrentHashMap;
  *
  * @author caidapao
  */
-public class RegisterSingleton {
+public class IOCRegisterSingleton {
 
-    private RegisterSingleton() {
+    private IOCRegisterSingleton() {
     }
 
     public static ConcurrentHashMap<String, Object> ioc = new ConcurrentHashMap<>();

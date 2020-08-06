@@ -12,15 +12,15 @@ import com.caidapao.pattern.singleton.lazy.LazyWifeTest;
  *
  * @author caidapao
  */
-public class RegisterSingletonTest {
+public class IOCRegisterSingletonTest {
 
 
     public static void main(String[] args) {
 
-        System.out.println(RegisterSingleton.getBean(LazyWifeTest.class.getName()));
-        System.out.println(RegisterSingleton.getBean(LazyWifeInnerTest.class.getName()));
-        System.out.println(RegisterSingleton.getBean(ReflectDestroyerTest.class.getName()));
-        System.out.println(RegisterSingleton.getBean(LazyWifeSyncTest.class.getName()));
+        System.out.println(IOCRegisterSingleton.getBean(LazyWifeTest.class.getName()));
+        System.out.println(IOCRegisterSingleton.getBean(LazyWifeInnerTest.class.getName()));
+        System.out.println(IOCRegisterSingleton.getBean(ReflectDestroyerTest.class.getName()));
+        System.out.println(IOCRegisterSingleton.getBean(LazyWifeSyncTest.class.getName()));
     }
 
 }

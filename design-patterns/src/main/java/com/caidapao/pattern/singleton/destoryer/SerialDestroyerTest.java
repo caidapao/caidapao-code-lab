@@ -15,7 +15,7 @@ public class SerialDestroyerTest {
 
     public static void main(String[] args) {
 
-        SerialDestroyer s1 = null;
+        SerialDestroyer s1;
         SerialDestroyer s2 = SerialDestroyer.getInstance();
 
         try {

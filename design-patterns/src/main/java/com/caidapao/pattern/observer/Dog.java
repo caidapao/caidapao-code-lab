@@ -2,7 +2,7 @@ package com.caidapao.pattern.observer;
 
 /**
  *
- * 被观察者事件触发后的处理（女神发布了事件，舔狗的处理）
+ * 观察者对被观察者发布事件后的处理（女神发布了事件，舔狗的处理）
  * Time 2020/8/16 11:57
  * address https://today.caidapao.com
  *

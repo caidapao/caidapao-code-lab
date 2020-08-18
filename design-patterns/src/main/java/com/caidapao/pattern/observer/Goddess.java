@@ -2,7 +2,7 @@ package com.caidapao.pattern.observer;
 
 /**
  *
- * 被观察者（女神）
+ * 女神本人，会发朋友圈（发布事件）
  * Time 2020/8/16 12:59
  * address https://today.caidapao.com
  *

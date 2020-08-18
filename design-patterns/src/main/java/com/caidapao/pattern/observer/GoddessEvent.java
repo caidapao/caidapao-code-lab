@@ -11,10 +11,17 @@ import java.lang.reflect.Method;
  */
 public class GoddessEvent {
 
+    /**
+     * 朋友圈类型（事件类型）
+     */
     private String eventType;
-
+    /**
+     * 朋友圈类型
+     */
     private GoddessEventListener target;
-
+    /**
+     * 朋友圈类型
+     */
     private Method dogHandle;
 
 
@@ -24,7 +31,7 @@ public class GoddessEvent {
         this.dogHandle = dogHandle;
     }
 
-    public Object getTarget() {
+    public GoddessEventListener getTarget() {
         return target;
     }
 

@@ -1,9 +1,11 @@
 package com.caidapao.pattern.observer;
 
+import java.lang.reflect.Method;
 import java.util.HashMap;
 import java.util.Map;
 
 /**
+ * 监听器
  * Time 2020/8/16 12:15
  * address https://today.caidapao.com
  *
@@ -17,10 +19,11 @@ public class GoddessEventContext {
 
     public void addListener(String eventType, GoddessEventListener target) {
         try {
-            events.put(eventType, new GoddessEvent(eventType, target, target.getClass().getMethod(HANDLE + this.getFirstUpperCase(eventType),GoddessEvent.class)));
+            String eventName = HANDLE + this.getFirstUpperCase(eventType);
+            Method dogHandle = target.getClass().getMethod(eventName, GoddessEvent.class);
+            events.put(eventType, new GoddessEvent(eventType, target, dogHandle));
         } catch (Exception e) {
-            //do nothing
-            e.printStackTrace();
+            //do nothing or print exception info
         }
     }
 
@@ -28,10 +31,9 @@ public class GoddessEventContext {
         GoddessEvent goddessEvent = events.get(eventType);
         if (goddessEvent != null) {
             try {
-                goddessEvent.getDogHandle().invoke(goddessEvent.getTarget(),goddessEvent);
+                goddessEvent.getDogHandle().invoke(goddessEvent.getTarget(), goddessEvent);
             } catch (Exception e) {
-                //do nothing
-                e.printStackTrace();
+                //do nothing or print exception info
             }
         }
     }

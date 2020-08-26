@@ -18,8 +18,8 @@ public class EventContext {
 
     public void addListener(String eventType, EventListener target) {
         try {
-            String eventName = HANDLE + this.getFirstUpperCase(eventType);
-            Method dogHandle = target.getClass().getMethod(eventName, Event.class);
+            String dogHandleName = HANDLE + this.getFirstUpperCase(eventType);
+            Method dogHandle = target.getClass().getMethod(dogHandleName, Event.class);
             events.put(eventType, new Event(eventType, target, dogHandle));
         } catch (Exception e) {
             //do nothing or do everything you want

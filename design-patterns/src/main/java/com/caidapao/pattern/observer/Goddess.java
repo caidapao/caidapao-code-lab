@@ -8,7 +8,7 @@ package com.caidapao.pattern.observer;
  *
  * @author caidapao
  */
-public class Goddess extends GoddessEventContext {
+public class Goddess extends EventContext {
 
     public void shareSick() {
         System.out.println("女神在朋友圈说自己生病了");

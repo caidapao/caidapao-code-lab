@@ -7,9 +7,9 @@ package com.caidapao.pattern.observer;
  *
  * @author caidapao
  */
-public interface GoddessEventListener {
+public interface EventListener {
 
-    void handleShareSick(GoddessEvent e);
+    void handleShareSick(Event e);
 
-    void handleSharePhotos(GoddessEvent e);
+    void handleSharePhotos(Event e);
 }

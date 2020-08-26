@@ -9,33 +9,33 @@ import java.lang.reflect.Method;
  *
  * @author caidapao
  */
-public class GoddessEvent {
+public class Event {
 
     /**
-     * 朋友圈类型（事件类型）
+     * 事件类型
      */
     private String eventType;
     /**
-     * 朋友圈类型
+     * 处理事件者（类似于朋友圈对谁可见）
      */
-    private GoddessEventListener target;
+    private EventListener target;
     /**
-     * 朋友圈类型
+     * 舔狗对事件的处理（事件的回调或者说是处理）
      */
     private Method dogHandle;
 
 
-    public GoddessEvent(String eventType, GoddessEventListener target, Method dogHandle) {
+    public Event(String eventType, EventListener target, Method dogHandle) {
         this.eventType = eventType;
         this.target = target;
         this.dogHandle = dogHandle;
     }
 
-    public GoddessEventListener getTarget() {
+    public EventListener getTarget() {
         return target;
     }
 
-    public void setTarget(GoddessEventListener target) {
+    public void setTarget(EventListener target) {
         this.target = target;
     }
 

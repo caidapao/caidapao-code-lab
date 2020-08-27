@@ -11,7 +11,7 @@ public class IronMan implements EventListener{
 
     public void handleShareSick(Event e){
         System.out.println("=========================钢铁直男，真情实意=========================");
-        System.out.println("钢铁直男以迅雷不及掩耳盗铃儿响叮当仁不让之势评论了一句：有病就去医院，还搁这发朋友圈？");
+        System.out.println("钢铁直男秒回：有病就去医院，还搁这发朋友圈？");
     }
 
     public void handleSharePhotos(Event e) {

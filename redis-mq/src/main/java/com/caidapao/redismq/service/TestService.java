@@ -4,6 +4,7 @@ import com.caidapao.redismq.util.RedisUtil;
 import org.springframework.stereotype.Service;
 import org.springframework.util.Assert;
 
+import java.io.File;
 import java.util.concurrent.CountDownLatch;
 
 /**
